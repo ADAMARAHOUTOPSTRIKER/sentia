@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENTIA — Haute Parfumerie</title>
+  <meta name="description" content="SENTIA, maison de haute parfumerie. Une collection confidentielle des plus belles fragrances du monde — Parfums de Marly, Xerjoff, Frédéric Malle…">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-word">
+      <span>S</span><span>E</span><span>N</span><span>T</span><span>I</span><span>A</span>
+    </div>
+    <div class="loader-line"></div>
+    <p class="loader-sub">Haute Parfumerie</p>
+  </div>
+
+  <!-- Curseur -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">Sent<em>ia</em></a>
+    <div class="nav-links">
+      <a href="#maison">La Maison</a>
+      <a href="#icones">Les Icônes</a>
+      <a href="#collection">La Collection</a>
+      <a href="#boutique">La Boutique</a>
+      <button class="cart-btn" aria-label="Ouvrir le panier">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M6 8h12l-1.2 12H7.2L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Héro : la vidéo lue au défilement -->
+  <header class="hero" id="hero">
+    <div class="hero-stage">
+      <canvas id="hero-canvas"></canvas>
+      <div class="hero-blend" aria-hidden="true"></div>
+      <div class="hero-white" aria-hidden="true"></div>
+
+      <div class="hero-titles">
+        <p class="hero-kicker">Maison de Haute Parfumerie</p>
+        <h1 class="hero-name">SENTIA</h1>
+        <p class="hero-tag">L'art de se souvenir par les sens</p>
+      </div>
+
+      <div class="hero-reveal">
+        <h2>Un parfum n'habille pas la peau.<br>Il révèle l'âme.</h2>
+        <p>Découvrez la collection</p>
+      </div>
+
+      <div class="hero-scroll-cue">
+        <span>Défiler</span>
+        <span class="cue-line"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- La Maison -->
+  <section class="maison section-pad" id="maison">
+    <div class="maison-inner reveal">
+      <div class="section-head">
+        <span class="section-eyebrow">La Maison</span>
+        <h2 class="section-title">L'Éloge du Sillage</h2>
+      </div>
+      <p class="lead">
+        Chez <em>Sentia</em>, nous croyons qu'une fragrance est une confidence —
+        un murmure d'ananas gorgé de soleil, une caresse de vanille de Madagascar,
+        l'or liquide d'un souvenir que l'on porte à même la peau.
+        Notre collection réunit les créations les plus convoitées de la parfumerie
+        d'exception, choisies une à une, <em>comme on choisit ses secrets</em>.
+      </p>
+      <p class="maison-sign">— Sentia, Paris</p>
+      <div class="maison-divider" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- Bandeau -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Haute Parfumerie</span><span class="dot">✦</span>
+      <span>Sentia Paris</span><span class="dot">✦</span>
+      <span>Fragrances d'Exception</span><span class="dot">✦</span>
+      <span>Depuis l'Émotion</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- Les Icônes -->
+  <section class="icones section-pad" id="icones">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Les Icônes</span>
+      <h2 class="section-title">Notre Sélection Signature</h2>
+      <p class="section-sub">Huit chefs-d'œuvre, huit manières de ne jamais être oublié·e.</p>
+    </div>
+    <div class="carousel">
+      <div class="carousel-track" id="carousel-track"></div>
+      <div class="carousel-nav">
+        <button class="carousel-arrow" id="car-prev" aria-label="Précédent">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button class="carousel-arrow" id="car-next" aria-label="Suivant">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      <p class="carousel-hint">Glissez pour explorer — touchez pour découvrir</p>
+    </div>
+  </section>
+
+  <!-- Le Rituel -->
+  <section class="rituel section-pad">
+    <div class="rituel-inner">
+      <span class="section-eyebrow reveal">Le Rituel</span>
+      <figure class="reveal">
+        <blockquote>
+          « Le parfum est la forme la plus intense du souvenir&nbsp;:
+          <strong>invisible, inoubliable, irrésistible.</strong> »
+        </blockquote>
+        <figcaption>L'esprit Sentia</figcaption>
+      </figure>
+      <div class="rituel-steps">
+        <div class="rituel-step reveal">
+          <p class="num">I</p>
+          <h3>Éveiller</h3>
+          <p>Vaporisez sur les points de pouls — poignets, cou — là où la peau respire et réchauffe la fragrance.</p>
+        </div>
+        <div class="rituel-step reveal">
+          <p class="num">II</p>
+          <h3>Révéler</h3>
+          <p>Ne frottez jamais. Laissez les notes de tête s'évanouir pour que le cœur se dévoile, lentement.</p>
+        </div>
+        <div class="rituel-step reveal">
+          <p class="num">III</p>
+          <h3>Demeurer</h3>
+          <p>Le fond s'installe pour des heures. C'est lui que l'on cherche encore sur une écharpe, des jours après.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- La Collection -->
+  <section class="collection section-pad" id="collection">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">La Collection</span>
+      <h2 class="section-title">Le Cabinet des Merveilles</h2>
+      <p class="section-sub">Chaque flacon, une destination. Chaque note, un aveu.</p>
+    </div>
+    <div class="collection-grid" id="collection-grid"></div>
+  </section>
+
+  <!-- La Boutique -->
+  <section class="boutique section-pad" id="boutique">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">La Boutique</span>
+      <h2 class="section-title">Nous Rendre Visite</h2>
+      <p class="section-sub">Poussez la porte, le reste appartient aux sens.</p>
+    </div>
+    <div class="boutique-grid">
+      <div class="boutique-info reveal">
+        <h3>Sentia — Paris</h3>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <div>
+            <p class="label">Adresse</p>
+            <p id="boutique-adresse">12 Avenue des Champs-Élysées, 75008 Paris</p>
+          </div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
+          <div>
+            <p class="label">Horaires</p>
+            <p>Lundi — Samedi : 10h30 – 19h30<br>Dimanche : sur rendez-vous privé</p>
+          </div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+          <div>
+            <p class="label">Contact</p>
+            <p>contact@sentia-parfums.fr<br>Commandes &amp; conseils via WhatsApp</p>
+          </div>
+        </div>
+      </div>
+      <div class="map-frame reveal">
+        <iframe id="map-iframe" title="Localisation de la boutique Sentia"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="footer-logo">SENTIA</p>
+    <p class="footer-tag">L'art de se souvenir par les sens</p>
+    <div class="footer-links">
+      <a href="#maison">La Maison</a>
+      <a href="#icones">Les Icônes</a>
+      <a href="#collection">La Collection</a>
+      <a href="#boutique">La Boutique</a>
+    </div>
+    <div class="footer-line"></div>
+    <p class="footer-copy">© <span id="footer-year"></span> Sentia — Haute Parfumerie. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Fiche produit -->
+  <div class="product-overlay" id="product-overlay" role="dialog" aria-modal="true">
+    <div class="overlay-backdrop"></div>
+    <div class="overlay-panel">
+      <button class="overlay-close" aria-label="Fermer">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="overlay-art" id="ovl-art"></div>
+      <div class="overlay-body">
+        <p class="ovl-house" id="ovl-house"></p>
+        <h3 class="ovl-name" id="ovl-name"></h3>
+        <p class="ovl-type" id="ovl-type"></p>
+        <p class="ovl-desc" id="ovl-desc"></p>
+        <div class="pyramide" id="ovl-notes"></div>
+        <div class="ovl-buy">
+          <div>
+            <p class="ovl-price" id="ovl-price"></p>
+            <p class="ovl-size" id="ovl-size"></p>
+          </div>
+          <button class="btn-gold" id="ovl-add">Ajouter à ma sélection</button>
+          <button class="btn-ghost" id="ovl-wa">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.4z"/></svg>
+            Commander via WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panier -->
+  <div class="cart-backdrop" id="cart-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Panier">
+    <div class="cart-head">
+      <h3>Ma Sélection</h3>
+      <button class="cart-close overlay-close" style="position:static" aria-label="Fermer le panier">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+
+    <div id="cart-view" style="display:flex;flex-direction:column;flex:1;min-height:0">
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-foot">
+        <div class="cart-total">
+          <span class="label">Total</span>
+          <span class="amount" id="cart-total">0 €</span>
+        </div>
+        <button class="btn-gold" id="go-checkout">Finaliser la commande</button>
+        <button class="btn-wa" id="wa-direct">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.4z"/></svg>
+          Commande express WhatsApp
+        </button>
+      </div>
+    </div>
+
+    <div id="checkout-view" class="checkout-panel" style="display:none">
+      <button class="checkout-back">← Retour à ma sélection</button>
+      <h4>Vos coordonnées</h4>
+      <form id="checkout-form">
+        <div class="field">
+          <label for="f-nom">Nom complet</label>
+          <input id="f-nom" name="nom" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="f-tel">Téléphone</label>
+          <input id="f-tel" name="tel" required type="tel" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="f-adresse">Adresse de livraison <small>(vide = retrait boutique)</small></label>
+          <input id="f-adresse" name="adresse" autocomplete="street-address">
+        </div>
+        <div class="field">
+          <label for="f-note">Note (facultatif)</label>
+          <textarea id="f-note" name="note" rows="2"></textarea>
+        </div>
+        <button class="btn-gold" style="width:100%;justify-content:center" type="submit">
+          Envoyer ma commande via WhatsApp
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"><span class="gold-dot"></span><span id="toast-text"></span></div>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/ScrollTrigger.min.js"></script>
+  <script src="js/vendor/lenis.min.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
