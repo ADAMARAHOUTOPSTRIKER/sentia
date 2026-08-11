@@ -162,6 +162,96 @@ const PRODUCTS = [
     tagline: "Le sous-bois après la pluie.",
     description: "La feuille de figuier froissée, la fougère humide, la mousse de chêne : la forêt du film SENTIA, distillée au petit matin.",
     notes: { tete: ["Feuille de figuier", "Rosée verte"], coeur: ["Fougère", "Sauge sclarée"], fond: ["Mousse de chêne", "Bois humides"] }
+  },
+  {
+    id: "rose-de-minuit", name: "Rose de Minuit", house: "SENTIA", type: "Eau de Parfum",
+    price: 175, size: "100 ml", gender: "Pour Elle", featured: false,
+    photo: "assets/products/rose-de-minuit.jpg",
+    accent: "#6e2436",
+    tagline: "La rose, après le coucher du soleil.",
+    description: "Une rose de Damas poivrée, assombrie de pivoine et posée sur des muscs noirs. Le jardin, une fois la nuit tombée.",
+    notes: { tete: ["Poivre noir", "Litchi"], coeur: ["Rose de Damas", "Pivoine sombre"], fond: ["Patchouli", "Muscs noirs"] }
+  },
+  {
+    id: "menthe-imperiale", name: "Menthe Impériale", house: "SENTIA", type: "Eau de Parfum",
+    price: 155, size: "100 ml", gender: "Mixte", featured: false,
+    photo: "assets/products/menthe-imperiale.jpg",
+    accent: "#7fc8a9",
+    tagline: "Le thé à la menthe, en habit du soir.",
+    description: "La menthe fraîche infusée au thé vert, adoucie d'absinthe et de santal. Le rituel marocain, distillé en eau de parfum.",
+    notes: { tete: ["Menthe verte", "Thé vert"], coeur: ["Absinthe douce", "Géranium"], fond: ["Bois de santal", "Sucre d'orge"] }
+  },
+  {
+    id: "safran-royal", name: "Safran Royal", house: "SENTIA", type: "Extrait de Parfum",
+    price: 230, size: "75 ml", gender: "Mixte", featured: false,
+    photo: "assets/products/safran-royal.jpg",
+    accent: "#c34a1d",
+    tagline: "L'épice la plus chère du monde, portée à même la peau.",
+    description: "Le safran de Taliouine sur une rose turque et un cuir doux, réchauffé d'ambre. Un extrait dense, presque solaire.",
+    notes: { tete: ["Safran de Taliouine", "Baie rose"], coeur: ["Rose turque", "Cuir doux"], fond: ["Ambre", "Bois précieux"] }
+  },
+  {
+    id: "cedrat-vert", name: "Cédrat Vert", house: "SENTIA", type: "Eau de Parfum",
+    price: 150, size: "100 ml", gender: "Mixte", featured: false,
+    photo: "assets/products/cedrat-vert.jpg",
+    accent: "#cdd37a",
+    tagline: "Le matin qui pique les yeux.",
+    description: "Le cédrat éclatant, la verveine et le basilic sur des muscs blancs. La fraîcheur nette d'un début de journée.",
+    notes: { tete: ["Cédrat", "Verveine"], coeur: ["Petit grain", "Basilic"], fond: ["Muscs blancs", "Cèdre clair"] }
+  },
+  {
+    id: "cuir-sellier", name: "Cuir Sellier", house: "SENTIA", type: "Eau de Parfum",
+    price: 195, size: "100 ml", gender: "Pour Lui", featured: false,
+    photo: "assets/products/cuir-sellier.jpg",
+    accent: "#5c3418",
+    tagline: "L'atelier du maître sellier.",
+    description: "Un cuir pleine fleur travaillé au tabac blond, sur une bergamote fumée et la fève tonka. L'odeur d'un savoir-faire.",
+    notes: { tete: ["Bergamote fumée"], coeur: ["Cuir pleine fleur", "Tabac blond"], fond: ["Fève tonka", "Vétiver"] }
+  },
+  {
+    id: "figuier-blanc", name: "Figuier Blanc", house: "SENTIA", type: "Eau de Parfum",
+    price: 165, size: "100 ml", gender: "Mixte", featured: false,
+    photo: "assets/products/figuier-blanc.jpg",
+    accent: "#e9e2cf",
+    tagline: "La sieste sous le figuier.",
+    description: "La feuille de figuier froissée, un lait d'amande et de figue, le santal en fond. L'ombre douce d'un après-midi d'été.",
+    notes: { tete: ["Feuille de figuier", "Coco vert"], coeur: ["Lait de figue", "Fleur d'amandier"], fond: ["Santal", "Muscs doux"] }
+  },
+  {
+    id: "miel-de-datte", name: "Miel de Datte", house: "SENTIA", type: "Eau de Parfum",
+    price: 170, size: "100 ml", gender: "Mixte", featured: false,
+    photo: "assets/products/miel-de-datte.jpg",
+    accent: "#d29a3f",
+    tagline: "Le sucre des oasis.",
+    description: "La datte Majhoul confite au miel d'oranger, la cannelle douce, le benjoin. Un gourmand oriental qui ne colle jamais.",
+    notes: { tete: ["Datte Majhoul", "Orange confite"], coeur: ["Miel d'oranger", "Cannelle douce"], fond: ["Benjoin", "Vanille"] }
+  },
+  {
+    id: "iris-de-marbre", name: "Iris de Marbre", house: "SENTIA", type: "Eau de Parfum",
+    price: 185, size: "100 ml", gender: "Pour Elle", featured: false,
+    photo: "assets/products/iris-de-marbre.jpg",
+    accent: "#aeb6c4",
+    tagline: "Froide dehors, tendre dedans.",
+    description: "L'iris pallida poudré, une violette discrète, des bois blancs. Une élégance minérale qui se réchauffe sur la peau.",
+    notes: { tete: ["Bergamote givrée"], coeur: ["Iris pallida", "Violette poudrée"], fond: ["Muscs propres", "Bois blancs"] }
+  },
+  {
+    id: "vetiver-dargent", name: "Vétiver d'Argent", house: "SENTIA", type: "Eau de Parfum",
+    price: 160, size: "100 ml", gender: "Pour Lui", featured: false,
+    photo: "assets/products/vetiver-dargent.jpg",
+    accent: "#8a9484",
+    tagline: "La fraîcheur qui a du fond.",
+    description: "Le vétiver de Java tranché de pamplemousse et de gingembre, sur l'ambre gris et la pierre humide. Droit, précis, durable.",
+    notes: { tete: ["Pamplemousse", "Gingembre"], coeur: ["Vétiver de Java", "Sauge"], fond: ["Ambre gris", "Pierre humide"] }
+  },
+  {
+    id: "musc-du-soir", name: "Musc du Soir", house: "SENTIA", type: "Eau de Parfum",
+    price: 165, size: "100 ml", gender: "Mixte", featured: false,
+    photo: "assets/products/musc-du-soir.jpg",
+    accent: "#efe9e2",
+    tagline: "La peau, en mieux.",
+    description: "Un musc blanc crémeux relevé de poire et d'héliotrope, fondu dans le cachemire et la vanille de Madagascar.",
+    notes: { tete: ["Aldéhydes doux", "Poire blanche"], coeur: ["Musc blanc", "Héliotrope"], fond: ["Cachemire", "Vanille de Madagascar"] }
   }
 ];
 
