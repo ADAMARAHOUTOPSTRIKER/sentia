@@ -114,245 +114,54 @@ function bottleSVG(cfg) {
 ------------------------------------------------------------ */
 const PRODUCTS = [
   {
-    id: "delina", name: "Delina", house: "Parfums de Marly", type: "Eau de Parfum",
-    price: 275, size: "75 ml", gender: "Pour Elle", featured: true, photo: null,
-    accent: "#e9b7ad",
-    svg: { shape: "marly", liquidTop: "#fbe3dd", liquidBottom: "#eeb4a8", capColor: "#cfd2d8", capDark: "#9a9da6", tassel: "#f0c9c0", label: "Delina" },
-    tagline: "Une rose couture, éclatante et veloutée.",
-    description: "Delina célèbre la féminité dans ce qu'elle a de plus lumineux : une rose de Turquie somptueuse, escortée de litchi et de rhubarbe, qui s'attarde sur un sillage de vanille et de muscs précieux.",
-    notes: {
-      tete: ["Rhubarbe", "Litchi", "Bergamote"],
-      coeur: ["Rose de Turquie", "Pivoine", "Muguet"],
-      fond: ["Vanille", "Muscs blancs", "Cachemire boisé"]
-    }
+    id: "soleil-dor", name: "Soleil d'Or", house: "SENTIA", type: "Eau de Parfum",
+    price: 185, size: "100 ml", gender: "Mixte", featured: true,
+    photo: "assets/products/soleil-dor.jpg",
+    accent: "#e2b25a",
+    svg: { shape: "flask", liquidTop: "#f6e7c8", liquidBottom: "#caa64e", capColor: "#b98a2f", capDark: "#8a6420", label: "Soleil d'Or" },
+    tagline: "Le premier rayon, embouteillé.",
+    description: "L'ananas confit rencontre la vanille bourbon dans une lumière de fin d'été. Le parfum du film SENTIA — celui par lequel la maison est née.",
+    notes: { tete: ["Ananas confit", "Bergamote de Calabre"], coeur: ["Vanille bourbon", "Frangipanier"], fond: ["Bois blond", "Muscs solaires"] }
   },
   {
-    id: "imagination", name: "Imagination", house: "Louis Vuitton", type: "Eau de Parfum",
-    price: 310, size: "100 ml", gender: "Pour Lui", featured: true, photo: null,
-    accent: "#bfe0d8",
-    svg: { shape: "column", liquidTop: "#eafaf4", liquidBottom: "#bfe0d8", capColor: "#2e2e33", capDark: "#151518", label: "Imagination" },
-    tagline: "La liberté d'un agrume infini.",
-    description: "Un départ d'agrumes étincelants — citron de Sicile, bergamote de Calabre — que le gingembre électrise, avant qu'un accord de thé noir fumé n'installe une élégance sans fin.",
-    notes: {
-      tete: ["Citron de Sicile", "Bergamote de Calabre", "Cédrat"],
-      coeur: ["Gingembre de Nigérie", "Néroli de Tunisie"],
-      fond: ["Thé noir", "Ambroxan"]
-    }
+    id: "ambre-noir", name: "Ambre Noir", house: "SENTIA", type: "Extrait de Parfum",
+    price: 210, size: "75 ml", gender: "Mixte", featured: true,
+    photo: "assets/products/ambre-noir.jpg",
+    accent: "#3a2c1d",
+    svg: { shape: "cube", liquidTop: "#5a4630", liquidBottom: "#241a10", capColor: "#1c1b1e", capDark: "#0a0a0c", label: "Ambre Noir" },
+    tagline: "La nuit garde ses secrets.",
+    description: "Un extrait sombre et enveloppant : l'encens s'ouvre sur une rose noire, l'ambre fume doucement jusqu'au oud. Le soir en verre fumé.",
+    notes: { tete: ["Encens", "Safran"], coeur: ["Ambre", "Rose noire"], fond: ["Oud", "Patchouli", "Vanille fumée"] }
   },
   {
-    id: "naxos", name: "Naxos", house: "Xerjoff — XJ 1861", type: "Eau de Parfum",
-    price: 255, size: "100 ml", gender: "Mixte", featured: true, photo: null,
-    accent: "#dfc06a",
-    svg: { shape: "amphora", liquidTop: "#f7ecc9", liquidBottom: "#dfc06a", capColor: "#caa64e", capDark: "#93752b", label: "Naxos" },
-    tagline: "Miel, tabac et soleil de Sicile.",
-    description: "Hommage à la Sicile, Naxos drape un tabac blond gorgé de miel dans la lavande et le jasmin sambac, sur un fond gourmand de fève tonka et de cacao. Un sillage inoubliable.",
-    notes: {
-      tete: ["Bergamote", "Citron", "Lavande"],
-      coeur: ["Miel", "Cannelle", "Jasmin sambac"],
-      fond: ["Tabac blond", "Vanille", "Fève tonka", "Cacao"]
-    }
+    id: "fleur-doranger", name: "Fleur d'Oranger", house: "SENTIA", type: "Eau de Parfum",
+    price: 165, size: "100 ml", gender: "Pour Elle", featured: true,
+    photo: "assets/products/fleur-doranger.jpg",
+    accent: "#f0cfa8",
+    svg: { shape: "amphora", liquidTop: "#fbe9d4", liquidBottom: "#eec9a2", capColor: "#caa64e", capDark: "#93752b", label: "Fleur d'Oranger" },
+    tagline: "Un matin dans l'orangeraie.",
+    description: "Le néroli cueilli à l'aube, la fleur d'oranger du Maroc en absolu, un fond de miel blanc : la tendresse à l'état pur.",
+    notes: { tete: ["Néroli", "Petit grain"], coeur: ["Fleur d'oranger du Maroc", "Jasmin"], fond: ["Miel blanc", "Muscs propres"] }
   },
   {
-    id: "valaya", name: "Valaya", house: "Parfums de Marly", type: "Eau de Parfum",
-    price: 275, size: "75 ml", gender: "Pour Elle", featured: true, photo: null,
-    accent: "#e7e2d4",
-    svg: { shape: "marly", liquidTop: "#fdfbf3", liquidBottom: "#e7e2d4", capColor: "#cfd2d8", capDark: "#9a9da6", tassel: "#efeadb", label: "Valaya" },
-    tagline: "La lumière du musc blanc.",
-    description: "Valaya est une aube en flacon : agrumes verts et fleur d'oranger caressés d'abricot, posés sur un voile de muscs blancs et de vanille éthérée. Pure, enveloppante, magnétique.",
-    notes: {
-      tete: ["Mandarine verte", "Bergamote"],
-      coeur: ["Fleur d'oranger", "Abricot", "Freesia"],
-      fond: ["Muscs blancs", "Vanille", "Ambrette"]
-    }
+    id: "bois-de-cedre", name: "Bois de Cèdre", house: "SENTIA", type: "Eau de Parfum",
+    price: 175, size: "100 ml", gender: "Pour Lui", featured: false,
+    photo: "assets/products/bois-de-cedre.jpg",
+    accent: "#7a4f2e",
+    svg: { shape: "column", liquidTop: "#8a5a33", liquidBottom: "#4a2c15", capColor: "#4a3527", capDark: "#2c1f16", label: "Bois de Cèdre" },
+    tagline: "La forêt de l'Atlas, au poignet.",
+    description: "Le cèdre de l'Atlas taillé net, réchauffé de cardamome et posé sur un cuir souple. Une signature droite, sans détour.",
+    notes: { tete: ["Poivre rose", "Cardamome"], coeur: ["Cèdre de l'Atlas", "Vétiver"], fond: ["Cuir", "Ambre gris"] }
   },
   {
-    id: "pure-vision", name: "Pure Vision", house: "Câline Homme", type: "Eau de Parfum",
-    price: 120, size: "100 ml", gender: "Pour Lui", featured: true, photo: null,
-    accent: "#cfe8ef",
-    svg: { shape: "column", liquidTop: "#eef9fc", liquidBottom: "#cfe8ef", capColor: "#232326", capDark: "#0f0f11", label: "Pure Vision" },
-    tagline: "Une fraîcheur cristalline.",
-    description: "Un souffle glacé de bergamote et de menthe givrée, un cœur marin salé de sauge claire, et la caresse finale d'un musc blanc boisé. La netteté faite parfum.",
-    notes: {
-      tete: ["Bergamote", "Menthe givrée"],
-      coeur: ["Accord marin", "Sauge sclarée"],
-      fond: ["Musc blanc", "Bois d'ambre"]
-    }
-  },
-  {
-    id: "orange-crush", name: "Orange Crush", house: "Parfums d'Elmar", type: "Extrait de Parfum",
-    price: 190, size: "60 ml", gender: "Mixte", featured: true, photo: null,
-    accent: "#e8863c",
-    svg: { shape: "cube", liquidTop: "#f6b23f", liquidBottom: "#d43d1e", capColor: "#caa64e", capDark: "#93752b", label: "Orange Crush" },
-    tagline: "Un coucher de soleil à même la peau.",
-    description: "L'orange sanguine, juteuse et solaire, s'embrase de safran et de cannelle avant de fondre dans un ambre vanillé au santal crémeux. Addictif, littéralement.",
-    notes: {
-      tete: ["Orange sanguine", "Mandarine"],
-      coeur: ["Safran", "Fleur d'oranger", "Cannelle"],
-      fond: ["Ambre", "Vanille", "Bois de santal"]
-    }
-  },
-  {
-    id: "portrait-of-a-lady", name: "Portrait of a Lady", house: "Éditions de Parfums Frédéric Malle", type: "Eau de Parfum",
-    price: 265, size: "50 ml", gender: "Pour Elle", featured: true, photo: null,
-    accent: "#7b2f3a",
-    svg: { shape: "column", liquidTop: "#d9c79e", liquidBottom: "#b39554", capColor: "#1c1b1e", capDark: "#0a0a0c", label: "Portrait of a Lady" },
-    tagline: "La rose la plus sombre du monde.",
-    description: "Chef-d'œuvre de Dominique Ropion : une rose turque opulente saturée de framboise et de cassis, enroulée de patchouli, d'encens et d'épices. Un portrait baroque, inimitable.",
-    notes: {
-      tete: ["Rose turque", "Framboise", "Cassis"],
-      coeur: ["Patchouli", "Encens", "Cannelle", "Clou de girofle"],
-      fond: ["Bois de santal", "Ambre", "Musc"]
-    }
-  },
-  {
-    id: "layton", name: "Layton", house: "Parfums de Marly", type: "Eau de Parfum",
-    price: 250, size: "75 ml", gender: "Pour Lui", featured: true, photo: null,
-    accent: "#2b3a5c",
-    svg: { shape: "marly", liquidTop: "#3d4f78", liquidBottom: "#1d2843", capColor: "#cfd2d8", capDark: "#9a9da6", label: "Layton" },
-    tagline: "Le magnétisme à l'état pur.",
-    description: "Pomme croquante et lavande aristocratique ouvrent le bal ; la vanille, le café et le bois de gaïac signent l'un des sillages les plus complimentés de la parfumerie moderne.",
-    notes: {
-      tete: ["Pomme", "Bergamote", "Lavande"],
-      coeur: ["Géranium", "Violette", "Jasmin"],
-      fond: ["Vanille", "Café", "Bois de gaïac", "Ambre gris"]
-    }
-  },
-
-  /* ---------- La Collection ---------- */
-  {
-    id: "vanille-jil-sander", name: "Vanille", house: "Jil Sander", type: "Eau de Parfum",
-    price: 85, size: "50 ml", gender: "Mixte", featured: false, photo: null,
-    accent: "#efe6d8",
-    svg: { shape: "flask", liquidTop: "#fdfaf2", liquidBottom: "#efe6d8", capColor: "#f2f0ea", capDark: "#c9c5ba", label: "Vanille" },
-    tagline: "Le minimalisme d'une vanille pure.",
-    description: "Une vanille bourbon nue, soulignée de fève tonka et de muscs doux. L'épure absolue, signée Jil Sander.",
-    notes: { tete: ["Poire", "Bergamote"], coeur: ["Vanille bourbon", "Héliotrope"], fond: ["Fève tonka", "Muscs doux"] }
-  },
-  {
-    id: "raphael", name: "Raphael", house: "Sentia Curation", type: "Extrait de Parfum",
-    price: 160, size: "75 ml", gender: "Mixte", featured: false, photo: null,
-    accent: "#dcdcde",
-    svg: { shape: "column", liquidTop: "#f4f4f5", liquidBottom: "#d5d5d8", capColor: "#eceae4", capDark: "#bdbab0", label: "Raphael" },
-    tagline: "Un ange de marbre blanc.",
-    description: "Iris poudré, encens froid et muscs minéraux : une sculpture olfactive d'une blancheur de marbre.",
-    notes: { tete: ["Iris blanc", "Poivre blanc"], coeur: ["Encens froid", "Racine d'iris"], fond: ["Muscs minéraux", "Bois blancs"] }
-  },
-  {
-    id: "colours-of-capri", name: "Colours of Capri", house: "Birkholz", type: "Eau de Parfum",
-    price: 210, size: "100 ml", gender: "Mixte", featured: false, photo: null,
-    accent: "#a8c93c",
-    svg: { shape: "cube", liquidTop: "#d3e86a", liquidBottom: "#8bb32a", capColor: "#caa64e", capDark: "#93752b", label: "Capri" },
-    tagline: "L'île en éclats de vert.",
-    description: "Citron vert pétillant, basilic froissé et figue lactée sur des bois flottés : Capri un matin de juin.",
-    notes: { tete: ["Citron vert", "Basilic"], coeur: ["Figue", "Petit grain"], fond: ["Bois flotté", "Musc"] }
-  },
-  {
-    id: "poetry-in-palermo", name: "Poetry in Palermo", house: "Birkholz", type: "Eau de Parfum",
-    price: 210, size: "100 ml", gender: "Mixte", featured: false, photo: null,
-    accent: "#e04a33",
-    svg: { shape: "cube", liquidTop: "#f2764f", liquidBottom: "#c92f1d", capColor: "#caa64e", capDark: "#93752b", label: "Palermo" },
-    tagline: "Un sonnet sicilien incandescent.",
-    description: "Orange sanguine et jasmin de nuit sous un ambre solaire : la poésie brûlante des ruelles de Palerme.",
-    notes: { tete: ["Orange sanguine", "Poivre rose"], coeur: ["Jasmin", "Fleur d'oranger"], fond: ["Ambre solaire", "Vanille"] }
-  },
-  {
-    id: "royal-nawaf", name: "Royal Nawaf", house: "Ormonde Jayne", type: "Eau de Parfum",
-    price: 240, size: "88 ml", gender: "Mixte", featured: false, photo: null,
-    accent: "#4a4a55",
-    svg: { shape: "column", liquidTop: "#6b6b78", liquidBottom: "#3a3a44", capColor: "#cfd2d8", capDark: "#9a9da6", label: "Royal Nawaf" },
-    tagline: "L'oud dans sa robe d'apparat.",
-    description: "Créé à Londres : rose de Taïf et safran couronnent un oud majestueux adouci d'ambre royal.",
-    notes: { tete: ["Safran", "Baies roses"], coeur: ["Rose de Taïf", "Oud"], fond: ["Ambre royal", "Bois précieux"] }
-  },
-  {
-    id: "kn8", name: "KN°8", house: "Korloff", type: "Eau de Parfum",
-    price: 95, size: "88 ml", gender: "Mixte", featured: false, photo: null,
-    accent: "#7d96c9",
-    svg: { shape: "flask", liquidTop: "#eef2fb", liquidBottom: "#7d96c9", capColor: "#e8e8ec", capDark: "#b5b5bd", label: "KN°8" },
-    tagline: "Un saphir à porter.",
-    description: "Violette givrée et bergamote sur des muscs bleutés, taillés comme un joyau Korloff.",
-    notes: { tete: ["Bergamote", "Cassis"], coeur: ["Violette", "Iris"], fond: ["Muscs bleutés", "Cèdre"] }
-  },
-  {
-    id: "kn18", name: "KN°18", house: "Korloff", type: "Eau de Parfum",
-    price: 95, size: "88 ml", gender: "Mixte", featured: false, photo: null,
-    accent: "#c26a94",
-    svg: { shape: "flask", liquidTop: "#fbeef5", liquidBottom: "#c26a94", capColor: "#e8e8ec", capDark: "#b5b5bd", label: "KN°18" },
-    tagline: "Un rubis gourmand.",
-    description: "Framboise veloutée, rose sucrée et patchouli doux : la facette la plus précieuse de la gourmandise.",
-    notes: { tete: ["Framboise", "Litchi"], coeur: ["Rose", "Pivoine"], fond: ["Patchouli doux", "Vanille"] }
-  },
-  {
-    id: "lussino-essence", name: "Lussino Essence", house: "The Merchant of Venice", type: "Eau de Parfum",
-    price: 150, size: "100 ml", gender: "Pour Lui", featured: false, photo: null,
-    accent: "#2f8f96",
-    svg: { shape: "column", liquidTop: "#57b7bd", liquidBottom: "#1e6b71", capColor: "#cfd2d8", capDark: "#9a9da6", label: "Lussino" },
-    tagline: "L'Adriatique en signature.",
-    description: "Embruns salés, sauge et ambre gris : la lagune vénitienne au large de Lussino.",
-    notes: { tete: ["Accord marin", "Citron"], coeur: ["Sauge", "Lavande de mer"], fond: ["Ambre gris", "Sel", "Bois clairs"] }
-  },
-  {
-    id: "c01-sunkissed", name: "C01 L'Eau So Sunkissed", house: "Sentia Curation", type: "Eau de Toilette",
-    price: 70, size: "100 ml", gender: "Mixte", featured: false, photo: null,
-    accent: "#ef9db5",
-    svg: { shape: "flask", liquidTop: "#fde3ec", liquidBottom: "#ef9db5", capColor: "#e7b7c5", capDark: "#c9899d", label: "Sunkissed" },
-    tagline: "La peau après la plage.",
-    description: "Monoï, ylang-ylang et muscs solaires : le souvenir doré d'un après-midi d'été.",
-    notes: { tete: ["Bergamote", "Noix de coco"], coeur: ["Monoï", "Ylang-ylang"], fond: ["Muscs solaires", "Vanille des îles"] }
-  },
-  {
-    id: "true-me-woman", name: "True Me for Woman", house: "Police", type: "Eau de Parfum",
-    price: 55, size: "75 ml", gender: "Pour Elle", featured: false, photo: null,
-    accent: "#f3b8cf",
-    svg: { shape: "flask", liquidTop: "#fce6f0", liquidBottom: "#f3b8cf", capColor: "#e3e3e8", capDark: "#b0b0b8", label: "True Me" },
-    tagline: "L'audace en rose translucide.",
-    description: "Litchi pétillant, rose lumineuse et vanille câline : une signature aussi franche qu'un regard.",
-    notes: { tete: ["Litchi", "Mandarine"], coeur: ["Rose", "Jasmin"], fond: ["Vanille", "Musc"] }
-  },
-  {
-    id: "true-me-man", name: "True Me for Man", house: "Police", type: "Eau de Parfum",
-    price: 55, size: "75 ml", gender: "Pour Lui", featured: false, photo: null,
-    accent: "#b9c4d6",
-    svg: { shape: "flask", liquidTop: "#eef2f8", liquidBottom: "#b9c4d6", capColor: "#e3e3e8", capDark: "#b0b0b8", label: "True Me" },
-    tagline: "Le caractère, sans détour.",
-    description: "Cardamome électrique, lavande nette et vétiver franc : une allure qui ne s'excuse pas.",
-    notes: { tete: ["Cardamome", "Bergamote"], coeur: ["Lavande", "Géranium"], fond: ["Vétiver", "Bois d'ambre"] }
-  },
-  {
-    id: "aegean-blue", name: "Aegean Blue", house: "Korres — Édition 2026", type: "Eau de Toilette",
-    price: 60, size: "50 ml", gender: "Mixte", featured: false, photo: null,
-    accent: "#2456a8",
-    svg: { shape: "cube", liquidTop: "#3f79d4", liquidBottom: "#173b7a", capColor: "#f2f0ea", capDark: "#c9c5ba", label: "Aegean Blue" },
-    tagline: "La mer Égée, distillée.",
-    description: "Citron grec, absolu de lentisque et notes iodées sur un santal cachemire : plonger sans se mouiller.",
-    notes: { tete: ["Citron", "Mandarine", "Cardamome"], coeur: ["Absolu de lentisque", "Notes iodées"], fond: ["Cachemire", "Bois de santal"] }
-  },
-  {
-    id: "air-du-temps-orchid", name: "L'Air du Temps — White Orchid", house: "Nina Ricci", type: "Eau de Parfum",
-    price: 90, size: "100 ml", gender: "Pour Elle", featured: false, photo: null,
-    accent: "#efe9df",
-    svg: { shape: "amphora", liquidTop: "#fdfaf3", liquidBottom: "#e9e2d3", capColor: "#d9c690", capDark: "#ac975", label: "White Orchid" },
-    tagline: "La colombe et l'orchidée.",
-    description: "Le mythe revisité : orchidée blanche, œillet signature et muscs ailés dans le flacon aux colombes.",
-    notes: { tete: ["Bergamote", "Pêche blanche"], coeur: ["Orchidée blanche", "Œillet"], fond: ["Muscs", "Bois blond"] }
-  },
-  {
-    id: "boujee-kitty", name: "Boujee Kitty — Caramel Milk | 22", house: "Kayali", type: "Eau de Parfum Intense",
-    price: 130, size: "100 ml", gender: "Mixte", featured: false, photo: null,
-    accent: "#e8c8d8",
-    svg: { shape: "cube", liquidTop: "#fbe4ee", liquidBottom: "#cfe0f2", capColor: "#e8e8ec", capDark: "#b5b5bd", label: "Boujee Kitty" },
-    tagline: "Une gourmandise couture.",
-    description: "Caramel au lait, praline dorée et vanille crémeuse sur des muscs cajoleurs. Interdit d'y résister.",
-    notes: { tete: ["Caramel au lait", "Bergamote"], coeur: ["Praline", "Fleur d'oranger"], fond: ["Vanille crémeuse", "Muscs"] }
-  },
-  {
-    id: "orchid-man", name: "Orchid Man — The Last Fight", house: "Frapin", type: "Eau de Parfum",
-    price: 175, size: "100 ml", gender: "Pour Lui", featured: false, photo: null,
-    accent: "#c6bda4",
-    svg: { shape: "flask", liquidTop: "#efe9d6", liquidBottom: "#cdc3a3", capColor: "#4a3527", capDark: "#2c1f16", label: "Orchid Man" },
-    tagline: "Le dernier round d'un gentleman.",
-    description: "Hommage aux légendes du ring : rhum ambré, orchidée virile, cuir souple et tabac de cave Frapin.",
-    notes: { tete: ["Rhum", "Bergamote"], coeur: ["Orchidée", "Cuir souple"], fond: ["Tabac", "Fève tonka"] }
+    id: "jardin-de-brume", name: "Jardin de Brume", house: "SENTIA", type: "Eau de Parfum",
+    price: 165, size: "100 ml", gender: "Mixte", featured: false,
+    photo: "assets/products/jardin-de-brume.jpg",
+    accent: "#b8ccb4",
+    svg: { shape: "flask", liquidTop: "#e7f0e3", liquidBottom: "#b8ccb4", capColor: "#c9cdd2", capDark: "#9a9da6", label: "Jardin de Brume" },
+    tagline: "Le sous-bois après la pluie.",
+    description: "La feuille de figuier froissée, la fougère humide, la mousse de chêne : la forêt du film SENTIA, distillée au petit matin.",
+    notes: { tete: ["Feuille de figuier", "Rosée verte"], coeur: ["Fougère", "Sauge sclarée"], fond: ["Mousse de chêne", "Bois humides"] }
   }
 ];
 
